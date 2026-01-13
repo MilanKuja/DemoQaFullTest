@@ -81,6 +81,16 @@ public class BaseMethods extends Driver {
 
     //Get methods
 
+    public String getText (String string){
+        waitForElementLocatedBy(string);
+        return getDriver().findElement(By.xpath(string)).getText().trim();
+    }
+
+    public String getStringAttribute(String string, String attribute){
+        waitForElementLocatedBy(string);
+        return getDriver().findElement(By.xpath(string)).getAttribute(attribute);
+    }
+
 
     //Scroll methods
 
