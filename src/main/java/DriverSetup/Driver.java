@@ -1,11 +1,11 @@
 package DriverSetup;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class Driver {
         return driver;
     }
 
-    public static List<String> createDriver() throws IOException {
+    public static List<String> createDriver() {
         if (getDriver() == null) {
             try {
                 InputStream inputStream = Driver.class.getClassLoader().getResourceAsStream("chromedriver.exe");
