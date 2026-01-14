@@ -4,12 +4,15 @@ import DriverSetup.Driver;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Objects;
+import java.util.Set;
 
 public class BaseMethods extends Driver {
 
@@ -111,6 +114,10 @@ public class BaseMethods extends Driver {
         js.executeScript("window.scrollTo(0, 0)");
     }
 
+    public void scrollToBottom(){
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+
     //Verify methods
 
     public boolean elementIsVisible(WebElement element){
@@ -146,5 +153,64 @@ public class BaseMethods extends Driver {
         getDriver().navigate().to(url);
 
     }
+
+    public void sendKeys(WebElement element, String string){
+        waitForElementToBeVisible(element);
+        element.sendKeys(string);
+    }
+
+    public void switchToNewTab(){
+        String originalTab = getDriver().getWindowHandle();
+        Set<String> allTabs = getDriver().getWindowHandles();
+        for (String tab : allTabs) {
+            if (!tab.equals(originalTab)) {
+                getDriver().switchTo().window(tab);
+                break;
+            }
+        }
+    }
+
+    public void addValuePlusMinus(String string, String plusXpath, String minusXpath, int targetValue) {
+        WebElement element = getDriver().findElement(By.xpath(string));
+        int currentValue = Integer.parseInt(element.getText().trim());
+
+        String directionXpath = targetValue > currentValue ? plusXpath : minusXpath;
+
+        while(currentValue != targetValue){
+            getDriver().findElement(By.xpath(directionXpath)).click();
+            currentValue = Integer.parseInt(element.getText().trim());
+            directionXpath = targetValue > currentValue ? plusXpath : minusXpath;
+        }
+    }
+
+    public void moveSliderToValueLeftAndRight(String xpath, int targetValue){
+        WebElement slider = getDriver().findElement(By.xpath(xpath));
+
+        int currentValue = Integer.parseInt(slider.getAttribute("value"));
+        int step = Integer.parseInt(slider.getAttribute("step"));
+
+        Keys direction = targetValue > currentValue ? Keys.ARROW_RIGHT : Keys.ARROW_LEFT;
+
+        while (currentValue != targetValue){
+            slider.sendKeys(direction);
+            currentValue = Integer.parseInt(Objects.requireNonNull(slider.getDomAttribute("value")));
+        }
+    }
+
+    public void moveSliderToValueUpAndDown(String xpath, int targetValue){
+        WebElement slider = getDriver().findElement(By.xpath(xpath));
+
+        int currentValue = Integer.parseInt(slider.getAttribute("value"));
+        int step = Integer.parseInt(slider.getAttribute("step"));
+
+        Keys direction = targetValue > currentValue ? Keys.ARROW_UP : Keys.ARROW_DOWN;
+
+        while (currentValue != targetValue){
+            slider.sendKeys(direction);
+            currentValue = Integer.parseInt(Objects.requireNonNull(slider.getDomAttribute("value")));
+        }
+    }
+
+
 }
 
