@@ -94,6 +94,17 @@ public class BaseMethods extends Driver {
 
     //Scroll methods
 
+    public void scrollToElementCenter(WebElement element){
+        js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});",element);
+    }
+
+    public void scrollBy(int x, int y){
+        js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
+    }
+
+    public void scrollToTop(){
+        js.executeScript("window.scrollTo(0, 0)");
+    }
 
     //Verify methods
 
