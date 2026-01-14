@@ -40,18 +40,18 @@ public class BaseMethods extends Driver {
         actions.doubleClick(element).perform();
     }
 
-    public void actionClickJavaScript(String string){
+    public void actionClickJavaScript(String xpath){
         try {
-            waitForElementLocatedBy(string);
+            waitForElementLocatedBy(xpath);
 
-            js.executeScript("arguments[0].scrollIntoView({block: 'ceneter'})", getDriver().findElement(By.xpath(string)));
+            js.executeScript("arguments[0].scrollIntoView({block: 'ceneter'})", getDriver().findElement(By.xpath(xpath)));
 
-            waitForElementToBeClickable(getDriver().findElement(By.xpath(string)));
+            waitForElementToBeClickable(getDriver().findElement(By.xpath(xpath)));
 
-            actionClick(getDriver().findElement(By.xpath(string)));
+            actionClick(getDriver().findElement(By.xpath(xpath)));
 
         } catch (Exception e){
-            WebElement element = getDriver().findElement(By.xpath(string));
+            WebElement element = getDriver().findElement(By.xpath(xpath));
             js.executeScript("arguments[0].click();", element);
         }
     }
@@ -70,25 +70,25 @@ public class BaseMethods extends Driver {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
-    public void waitForElementLocatedBy (String string){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(string)));
+    public void waitForElementLocatedBy (String xpath){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
     }
 
-    public void waitForElementNotLocatedBy (String string){
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(string)));
+    public void waitForElementNotLocatedBy (String xpath){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)));
     }
 
 
     //Get methods
 
-    public String getText (String string){
-        waitForElementLocatedBy(string);
-        return getDriver().findElement(By.xpath(string)).getText().trim();
+    public String getText (String xpath){
+        waitForElementLocatedBy(xpath);
+        return getDriver().findElement(By.xpath(xpath)).getText().trim();
     }
 
-    public String getStringAttribute(String string, String attribute){
-        waitForElementLocatedBy(string);
-        return getDriver().findElement(By.xpath(string)).getAttribute(attribute);
+    public String getAttribute(String xpath, String attribute){
+        waitForElementLocatedBy(xpath);
+        return getDriver().findElement(By.xpath(xpath)).getAttribute(attribute);
     }
 
 
