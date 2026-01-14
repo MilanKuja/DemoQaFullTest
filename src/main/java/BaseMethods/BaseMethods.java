@@ -21,57 +21,58 @@ public class BaseMethods extends Driver {
 
     //Click methods
 
-    public void click(WebElement element){
-        waitForElementToBeClickable(element);
-        element.click();
+    public void click(String xpath){
+        waitForElementToBeClickable(xpath);
+        findElement(xpath).click();
+
     }
 
-    public void actionClick(WebElement element){
-        waitForElementToBeClickable(element);
+    public void actionClick(String xpath){
+        waitForElementToBeClickable(xpath);
         Actions actions = new Actions(getDriver());
-        actions.click(element).perform();
+        actions.click(findElement(xpath)).perform();
     }
 
-    public void rightClick(WebElement element){
-        waitForElementToBeClickable(element);
+    public void rightClick(String xpath){
+        waitForElementToBeClickable(xpath);
         Actions actions = new Actions(getDriver());
-        actions.contextClick(element).perform();
+        actions.contextClick(findElement(xpath)).perform();
     }
 
-    public void dubleClick(WebElement element){
-        waitForElementToBeClickable(element);
+    public void dubleClick(String xpath){
+        waitForElementToBeClickable(xpath);
         Actions actions = new Actions(getDriver());
-        actions.doubleClick(element).perform();
+        actions.doubleClick(findElement(xpath)).perform();
     }
 
     public void actionClickJavaScript(String xpath){
         try {
             waitForElementLocatedBy(xpath);
 
-            js.executeScript("arguments[0].scrollIntoView({block: 'ceneter'})", getDriver().findElement(By.xpath(xpath)));
+            js.executeScript("arguments[0].scrollIntoView({block: 'ceneter'})", findElement(xpath));
 
-            waitForElementToBeClickable(getDriver().findElement(By.xpath(xpath)));
+            waitForElementToBeClickable(xpath);
 
-            actionClick(getDriver().findElement(By.xpath(xpath)));
+            actionClick(xpath);
 
         } catch (Exception e){
-            WebElement element = getDriver().findElement(By.xpath(xpath));
+            WebElement element = findElement(xpath);
             js.executeScript("arguments[0].click();", element);
         }
     }
 
     //Wait methods
 
-    public void waitForElementToBeClickable(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+    public void waitForElementToBeClickable(String xpath) {
+        wait.until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.xpath(xpath))));
     }
 
-    public void waitForElementToBeVisible(WebElement element){
-        wait.until(ExpectedConditions.visibilityOf(element));
+    public void waitForElementToBeVisible(String xpath){
+        wait.until(ExpectedConditions.visibilityOf(findElement(xpath)));
     }
 
-    public void waitForElementNotVisible(WebElement element){
-        wait.until(ExpectedConditions.invisibilityOf(element));
+    public void waitForElementNotVisible(String xpath){
+        wait.until(ExpectedConditions.invisibilityOf(findElement(xpath)));
     }
 
     public void waitForElementLocatedBy (String xpath){
@@ -120,19 +121,19 @@ public class BaseMethods extends Driver {
 
     //Verify methods
 
-    public boolean elementIsVisible(WebElement element){
+    public boolean elementIsVisible(String xpath){
         boolean isVisible = true;
         try{
-            waitForElementToBeVisible(element);
+            waitForElementToBeVisible(xpath);
         } catch (Exception e){
             isVisible = false;
         } return isVisible;
     }
 
-    public boolean elementIsNotVisible(WebElement element){
+    public boolean elementIsNotVisible(String xpath){
         boolean isNotVisible = true;
         try {
-            waitForElementNotVisible(element);
+            waitForElementNotVisible(xpath);
         } catch (Exception e) {
             isNotVisible = false;
         } return isNotVisible;
@@ -154,9 +155,9 @@ public class BaseMethods extends Driver {
 
     }
 
-    public void sendKeys(WebElement element, String string){
-        waitForElementToBeVisible(element);
-        element.sendKeys(string);
+    public void sendKeys(String xpath, String string){
+        waitForElementToBeVisible(xpath);
+        findElement(xpath).sendKeys(string);
     }
 
     public void switchToNewTab(){
@@ -209,6 +210,10 @@ public class BaseMethods extends Driver {
             slider.sendKeys(direction);
             currentValue = Integer.parseInt(Objects.requireNonNull(slider.getDomAttribute("value")));
         }
+    }
+
+    public WebElement findElement(String string){
+        return  getDriver().findElement(By.xpath(string));
     }
 
 
