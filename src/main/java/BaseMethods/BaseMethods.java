@@ -1,6 +1,7 @@
 package BaseMethods;
 
 import DriverSetup.Driver;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -78,6 +79,10 @@ public class BaseMethods extends Driver {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(string)));
     }
 
+    public void waitForPresenceOfElement(String string){
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(string)));
+    }
+
 
     //Get methods
 
@@ -108,6 +113,38 @@ public class BaseMethods extends Driver {
 
     //Verify methods
 
+    public boolean elementIsVisible(WebElement element){
+        boolean isVisible = true;
+        try{
+            waitForElementToBeVisible(element);
+        } catch (Exception e){
+            isVisible = false;
+        } return isVisible;
+    }
+
+    public boolean elementIsNotVisible(WebElement element){
+        boolean isNotVisible = true;
+        try {
+            waitForElementNotVisible(element);
+        } catch (Exception e) {
+            isNotVisible = false;
+        } return isNotVisible;
+    }
+
+    public void verifyElementIsDisabled(String string){
+        waitForPresenceOfElement(string);
+        Assertions.assertFalse(getDriver().findElement(By.xpath(string)).isEnabled(), "Element is enabled");
+
+    }
+
+
 
     //Other methods
+
+    public void openUrl(String url){
+        createDriver();
+        getDriver().navigate().to(url);
+
+    }
 }
+
