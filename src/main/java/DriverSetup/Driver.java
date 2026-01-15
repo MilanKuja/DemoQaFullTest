@@ -9,7 +9,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.List;
 
-public class Driver {
+public class Driver  {
     private static final String CHROME_DRIVER = "webdriver.chrome.driver";
 
     private static WebDriver driver;

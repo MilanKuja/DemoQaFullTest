@@ -92,12 +92,12 @@ public class BaseMethods extends Driver {
 
     public String getText (String xpath){
         waitForElementLocatedBy(xpath);
-        return getDriver().findElement(By.xpath(xpath)).getText().trim();
+        return findElement(xpath).getText().trim();
     }
 
     public String getAttribute(String xpath, String attribute){
         waitForElementLocatedBy(xpath);
-        return getDriver().findElement(By.xpath(xpath)).getAttribute(attribute);
+        return findElement(xpath).getAttribute(attribute);
     }
 
 
@@ -139,9 +139,15 @@ public class BaseMethods extends Driver {
         } return isNotVisible;
     }
 
-    public void verifyElementIsDisabled(String string){
-        waitForPresenceOfElement(string);
-        Assertions.assertFalse(getDriver().findElement(By.xpath(string)).isEnabled(), "Element is enabled");
+    public void verifyElementIsDisabled(String xpath){
+        waitForPresenceOfElement(xpath);
+        Assertions.assertFalse(getDriver().findElement(By.xpath(xpath)).isEnabled(), "Element is enabled");
+
+    }
+
+    public void verifyPlaceHolder(String xpath, String text){
+        waitForElementToBeVisible(xpath);
+        Assertions.assertEquals(text, getAttribute(xpath, "placeholder"), "Placeholder text is not correct!!");
 
     }
 
