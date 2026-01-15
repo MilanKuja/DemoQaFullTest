@@ -12,7 +12,18 @@ public class XpathLocators  {
     //TextBox:
     public static final String fullNameInput = "//input[@id = 'userName']";
     public static final String emailInput = "//input[@id = 'userEmail']";
-
+    public static final String currentAddressInput = "//textarea[@id = 'currentAddress']";
+    public static final String permanentAddressInput = "//textarea[@id = 'permanentAddress']";
+    public static final String fullNameTextLabel = "//label[@id = 'userName-label']";
+    public static final String emailLabel = "//label[@id = 'userEmail-label']";
+    public static final String currentAddressLabel = "//label[@id = 'currentAddress-label']";
+    public static final String permanentAddressLabel = "//label[@id = 'permanentAddress-label']";
+    public static final String textBoxHeader = "//h1[@class = 'text-center']";
+    public static final String submitButton = "//button[@id = 'submit']";
+    public static final String nameOutput = "//p[@id = 'name']";
+    public static final String emailOutput = "//p[@id = 'email']";
+    public static final String currentAddressOutput = "//p[@id = 'currentAddress']";
+    public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
 
 }
 

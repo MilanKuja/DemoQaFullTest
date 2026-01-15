@@ -92,7 +92,7 @@ public class BaseMethods extends Driver {
 
     public String getText (String xpath){
         waitForElementLocatedBy(xpath);
-        return findElement(xpath).getText().trim();
+        return findElement(xpath).getText().replace("\n", "").trim();
     }
 
     public String getAttribute(String xpath, String attribute){
@@ -149,6 +149,11 @@ public class BaseMethods extends Driver {
         waitForElementToBeVisible(xpath);
         Assertions.assertEquals(text, getAttribute(xpath, "placeholder"), "Placeholder text is not correct!!");
 
+    }
+
+    public void verifyText(String xpath, String text, String message){
+        waitForElementToBeVisible(xpath);
+        Assertions.assertEquals(text, getText(xpath), "Text is not correct");
     }
 
 
