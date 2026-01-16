@@ -95,6 +95,13 @@ public class BaseMethods extends Driver {
         return findElement(xpath).getText().replace("\n", "").trim();
     }
 
+
+
+    public String getTextWithSpace (String xpath){
+        waitForElementLocatedBy(xpath);
+        return findElement(xpath).getText().replace("\n"," ").trim();
+    }
+
     public String getAttribute(String xpath, String attribute){
         waitForElementLocatedBy(xpath);
         return findElement(xpath).getAttribute(attribute);
@@ -154,6 +161,11 @@ public class BaseMethods extends Driver {
     public void verifyText(String xpath, String text, String message){
         waitForElementToBeVisible(xpath);
         Assertions.assertEquals(text, getText(xpath), "Text is not correct");
+    }
+
+    public void verifyTexts(String xpath, String text, String message){
+        waitForElementToBeVisible(xpath);
+        Assertions.assertEquals(text, getTextWithSpace(xpath), "Text is not correct");
     }
 
     public void verifyCheckBoxChecked(String xpath, String attribute, String contains){

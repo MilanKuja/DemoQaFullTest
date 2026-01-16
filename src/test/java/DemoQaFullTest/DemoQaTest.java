@@ -24,7 +24,7 @@ public class DemoQaTest extends DemoQaHomePage{
                 .typeFullNameText("Gavrilo Ilic").typeEmailText("crnigavrilo@gmail.com").typeCurrentAddressText("Zikice Jovanovica Spanca 15").typePermanentAddressText("Svetozara Markovica 88").clickSubmitButton()
                 .verifyFirstNameOutput("Gavrilo Ilic").verifyEmailOutput("crnigavrilo@gmail.com").verifyCurrentAddressOutput("Zikice Jovanovica Spanca 15").verifyPermanentAddressOutput("Svetozara Markovica 88")
                 .clickOnCheckBoxDropDown()
-                .clickOnHomeExtandButton().clickOnHomeCheckBox().verifyAllCheckBoxesAreCheck();
+                .clickOnHomeExtandButton().clickOnHomeCheckBox().verifyAllCheckBoxesAreCheck().verifyResoultText();
 
     }
 

@@ -20,4 +20,11 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-check");
         return this;
     }
+
+    public DemoQaCheckBoxPage verifyResoultText(){
+        verifyTexts(XpathLocators.resoultText,
+                "You have selected : home desktop notes commands documents workspace react angular veu office public private classified general downloads wordFile excelFile",
+                "Resoult text is not correct");
+        return this;
+    }
 }

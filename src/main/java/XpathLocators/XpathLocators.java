@@ -32,6 +32,7 @@ public class XpathLocators  {
     public static final String desktopCheckBox = "//label[@for='tree-node-desktop']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String documentsCheckBox = "//label[@for='tree-node-documents']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String resoultText = "//div[@id = 'result']";
 }
 
 
