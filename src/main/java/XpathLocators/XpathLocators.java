@@ -27,8 +27,11 @@ public class XpathLocators  {
     public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
 
     //CheckBox:
-
-
+    public static final String homeDropDownButton = "//label[@for='tree-node-home']/preceding-sibling::button";
+    public static final String homeCheckBox = "//label[@for = 'tree-node-home']//span[@class = 'rct-checkbox']";
+    public static final String desktopCheckBox = "//label[@for = 'tree-node-desktop']//span[@class = 'rct-checkbox']";
+    public static final String documentsCheckBox = "//label[@for = 'tree-node-documents']//span[@class = 'rct-checkbox']";
+    public static final String downloadsCheckBox = "//label[@for = 'tree-node-downloads']//span[@class = 'rct-checkbox']";
 }
 
 
