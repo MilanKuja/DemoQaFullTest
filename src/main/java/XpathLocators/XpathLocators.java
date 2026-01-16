@@ -6,6 +6,7 @@ public class XpathLocators  {
     //DropDown View:
     public static final String elementsDropDown = "//div[normalize-space(text())='Elements']";
     public static final String textBoxDrop = "//li[@id = 'item-0']//span[text() = 'Text Box']";
+    public static final String checkBoxDrop = "//li[@id = 'item-1']//span[text() = 'Check Box']";
 
 
 
@@ -24,6 +25,9 @@ public class XpathLocators  {
     public static final String emailOutput = "//p[@id = 'email']";
     public static final String currentAddressOutput = "//p[@id = 'currentAddress']";
     public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
+
+    //CheckBox:
+
 
 }
 

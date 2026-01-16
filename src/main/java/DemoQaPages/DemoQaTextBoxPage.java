@@ -103,6 +103,13 @@ public class DemoQaTextBoxPage extends DemoQaHomePage {
         return this;
     }
 
+    public DemoQaCheckBoxPage clickOnCheckBoxDropDown(){
+        click(XpathLocators.checkBoxDrop);
+        return new DemoQaCheckBoxPage();
+    }
+
+
+
 
 
 
