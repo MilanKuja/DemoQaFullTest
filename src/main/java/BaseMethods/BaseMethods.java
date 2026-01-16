@@ -141,7 +141,7 @@ public class BaseMethods extends Driver {
 
     public void verifyElementIsDisabled(String xpath){
         waitForPresenceOfElement(xpath);
-        Assertions.assertFalse(getDriver().findElement(By.xpath(xpath)).isEnabled(), "Element is enabled");
+        Assertions.assertFalse(findElement(xpath).isEnabled(), "Element is enabled");
 
     }
 
@@ -154,6 +154,11 @@ public class BaseMethods extends Driver {
     public void verifyText(String xpath, String text, String message){
         waitForElementToBeVisible(xpath);
         Assertions.assertEquals(text, getText(xpath), "Text is not correct");
+    }
+
+    public void verifyCheckBoxChecked(String xpath, String attribute, String contains){
+        waitForElementToBeVisible(xpath);
+        Assertions.assertTrue(findElement(xpath).getAttribute(attribute).contains(contains));
     }
 
 
