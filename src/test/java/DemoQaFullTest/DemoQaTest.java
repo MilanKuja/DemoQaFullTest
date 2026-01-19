@@ -47,7 +47,9 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnDownloadsExtandButton().clickOnDownloadsCheckBox()
                 .clickOnWordFileDownloadsCheckBox().verifyDownloadsCheckBoxIsPartialChecked()
                 .clickOnExpandAll().allElementsAreVisible()
-                .clickOnCollapseAll();
+                .clickOnCollapseAll()
+                .clickOnRadioButtonDrop()
+                ;
 
 
 

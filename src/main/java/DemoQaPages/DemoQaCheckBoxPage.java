@@ -289,6 +289,11 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
+    public DemoQaRadioButtonPage clickOnRadioButtonDrop(){
+        click(XpathLocators.radioButtonDrop);
+        return new DemoQaRadioButtonPage();
+    }
+
 
 
 
