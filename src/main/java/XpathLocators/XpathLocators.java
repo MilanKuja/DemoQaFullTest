@@ -27,11 +27,24 @@ public class XpathLocators  {
     public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
 
     //CheckBox:
-    public static final String homeDropDownButton = "//label[@for='tree-node-home']/preceding-sibling::button";
+    public static final String homeExtandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
     public static final String homeCheckBox = "//label[@for = 'tree-node-home']//span[@class = 'rct-checkbox']";
+    //Desktop:
+    public static final String desktopExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
     public static final String desktopCheckBox = "//label[@for='tree-node-desktop']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String notesChcekBox = "//label[@for='tree-node-notes']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String commandsCheckBox = "//label[@for='tree-node-commands']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    //Documents
+    public static final String documentsExtandButton = "//label[@for='tree-node-documents']/preceding-sibling::button";
     public static final String documentsCheckBox = "//label[@for='tree-node-documents']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String workSpaceCheckBox = "//label[@for='tree-node-workspace']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String officeCheckBox = "//label[@for='tree-node-office']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    //Downloads
+    public static final String downloadsExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
     public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String wordFileCheckBox = "//label[@for='tree-node-wordFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String excelFileCheckBox = "//label[@for='tree-node-excelFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    //Resoult
     public static final String resoultText = "//div[@id = 'result']";
 }
 
