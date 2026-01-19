@@ -51,12 +51,18 @@ public class XpathLocators  {
     public static final String classifiedOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String generalOffice = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Downloads
-    public static final String downloadsExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
+    public static final String downloadsExtandButton = "//label[@for='tree-node-downloads']/preceding-sibling::button";
     public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String wordFileCheckBox = "//label[@for='tree-node-wordFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String excelFileCheckBox = "//label[@for='tree-node-excelFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Resoult
     public static final String resoultText = "//div[@id = 'result']";
+    //Plus and Minus extadns
+    public static final String plusExpandAll = "//button[@aria-label= 'Expand all']";
+    public static final String minusCollapseAll = "//button[@aria-label= 'Collapse all']";
+
+
+
 }
 
 

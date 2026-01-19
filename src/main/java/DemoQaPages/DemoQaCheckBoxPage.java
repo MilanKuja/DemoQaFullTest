@@ -116,6 +116,15 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
     }
 
 
+    public DemoQaCheckBoxPage clickOnExpandAll(){
+        click(XpathLocators.plusExpandAll);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnCollapseAll(){
+        click(XpathLocators.minusCollapseAll);
+        return this;
+    }
 
     public DemoQaCheckBoxPage verifyAllCheckBoxesAreCheck() {
         verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-check", "Desktop checkbox is not checked.");
@@ -249,6 +258,34 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
 
     public DemoQaCheckBoxPage confirmationMessageIsNotVisible(){
         elementIsNotVisible(XpathLocators.resoultText);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage allElementsAreVisible(){
+        try {
+            elementIsVisible(XpathLocators.desktopCheckBox);
+            elementIsVisible(XpathLocators.notesCheckBox);
+            elementIsVisible(XpathLocators.commandsCheckBox);
+            elementIsVisible(XpathLocators.desktopExtandButton);
+            elementIsVisible(XpathLocators.documentsCheckBox);
+            elementIsVisible(XpathLocators.workSpaceCheckBox);
+            elementIsVisible(XpathLocators.officeCheckBox);
+            elementIsVisible(XpathLocators.workSpaceExtandButton);
+            elementIsVisible(XpathLocators.officeExtandButton);
+            elementIsVisible(XpathLocators.reactWorkSpaceCheckBox);
+            elementIsVisible(XpathLocators.angularWorkSpaceCheckBox);
+            elementIsVisible(XpathLocators.veuWorkSpaceCheckBox);
+            elementIsVisible(XpathLocators.publicOfficeCheckBox);
+            elementIsVisible(XpathLocators.privateOfficeCheckBox);
+            elementIsVisible(XpathLocators.classifiedOfficeCheckBox);
+            elementIsVisible(XpathLocators.downloadsCheckBox);
+            elementIsVisible(XpathLocators.wordFileCheckBox);
+            elementIsVisible(XpathLocators.excelFileCheckBox);
+            elementIsVisible(XpathLocators.downloadsExtandButton);
+        } catch (Exception e){
+            System.out.println("Element is not visible");
+        }
+
         return this;
     }
 

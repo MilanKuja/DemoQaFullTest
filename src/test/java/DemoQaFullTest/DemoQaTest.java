@@ -42,7 +42,12 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnReactCheckBox().clickOnAngularCheckBox().clickOnPrivateOfficeCheckBox().clickOnClassifiedOfficeCheckBox()
                 .verifyDocumentsIsPartialCheck()
                 .clickOnWorkSpaceCheckBox().clickOnOfficeCheckBox()
-                .verifyOfficeCheckBoxIsChecked().verifyWorkSpaceCheckBoxIsChecked().verifyHomeIsPartialCheck();
+                .verifyOfficeCheckBoxIsChecked().verifyWorkSpaceCheckBoxIsChecked().verifyHomeIsPartialCheck()
+                .clickOnOfficeCheckBox().clickOnWorkSpaceCheckBox().clickOnDocumentsExtandButton()
+                .clickOnDownloadsExtandButton().clickOnDownloadsCheckBox()
+                .clickOnWordFileDownloadsCheckBox().verifyDownloadsCheckBoxIsPartialChecked()
+                .clickOnExpandAll().allElementsAreVisible()
+                .clickOnCollapseAll();
 
 
 
