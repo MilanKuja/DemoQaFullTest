@@ -79,6 +79,7 @@ public class DemoQaTextBoxPage extends DemoQaHomePage {
     }
 
     public DemoQaTextBoxPage clickSubmitButton(){
+        scrollToElementCenter(XpathLocators.submitButton);
         click(XpathLocators.submitButton);
         return this;
     }

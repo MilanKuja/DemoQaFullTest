@@ -28,11 +28,11 @@ public class XpathLocators  {
 
     //CheckBox:
     public static final String homeExtandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
-    public static final String homeCheckBox = "//label[@for = 'tree-node-home']//span[@class = 'rct-checkbox']";
+    public static final String homeCheckBox = "//label[@for='tree-node-home']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Desktop:
     public static final String desktopExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
     public static final String desktopCheckBox = "//label[@for='tree-node-desktop']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String notesChcekBox = "//label[@for='tree-node-notes']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String notesCheckBox = "//label[@for='tree-node-notes']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String commandsCheckBox = "//label[@for='tree-node-commands']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Documents
     public static final String documentsExtandButton = "//label[@for='tree-node-documents']/preceding-sibling::button";

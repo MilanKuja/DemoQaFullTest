@@ -109,8 +109,8 @@ public class BaseMethods extends Driver {
 
     //Scroll methods
 
-    public void scrollToElementCenter(WebElement element){
-        js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});",element);
+    public void scrollToElementCenter(String xpath){
+        js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'center'});",findElement(xpath));
     }
 
     public void scrollBy(int x, int y){

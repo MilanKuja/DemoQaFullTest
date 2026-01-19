@@ -4,6 +4,7 @@ import XpathLocators.XpathLocators;
 
 public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
 
+
     public DemoQaCheckBoxPage clickOnHomeExtandButton() {
         click(XpathLocators.homeExtandButton);
         return this;
@@ -29,8 +30,13 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
-    public DemoQaCheckBoxPage clickOnDekstopCheckBox(){
+    public DemoQaCheckBoxPage clickOnDesktopCheckBox(){
         click(XpathLocators.desktopCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnNotesCheckBox(){
+        click(XpathLocators.notesCheckBox);
         return this;
     }
 
@@ -50,13 +56,14 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-check", "Desktop checkbox is not checked.");
         verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-check","Documents checkbox is not checked.");
         verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-check","Downloads checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.homeCheckBox,"class","rct-icon-check","Home checkbox is checked");
         return this;
     }
 
-    public DemoQaCheckBoxPage verifyResoultText(){
-        verifyTexts(XpathLocators.resoultText,
-                "You have selected : home desktop notes commands documents workspace react angular veu office public private classified general downloads wordFile excelFile",
-                "Resoult text is not correct");
+    public DemoQaCheckBoxPage verifyAllDesktopCheckBoxesAreChecked(){
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Notes checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox,"class","rct-icon-check","Desktop checkbox is checked");
         return this;
     }
 
@@ -67,17 +74,53 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
+    public DemoQaCheckBoxPage verifyHomeIsPartialCheck(){
+        verifyCheckBoxChecked(XpathLocators.homeCheckBox, "class", "rct-icon-half-check","Home checkbox is not partial checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyDesktopIsPartialCheck(){
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-half-check","Desktop checkbox is not partial checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyDesktopCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Desktop checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyNotesCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Notes checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyCommandsCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
+        return this;
+    }
+
+
+
+
+
+    public DemoQaCheckBoxPage verifyResoultText(String string){
+        verifyTexts(XpathLocators.resoultText,
+                string,
+                "Resoult text is not correct");
+        return this;
+    }
+
     public DemoQaCheckBoxPage confirmationMessageIsNotVisible(){
         elementIsNotVisible(XpathLocators.resoultText);
         return this;
     }
 
 
-    public DemoQaCheckBoxPage verifyAllDesktopCheckBoxesAreChecked(){
-        verifyCheckBoxChecked(XpathLocators.notesChcekBox, "class", "rct-icon-check","Notes checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
-        return this;
-    }
+
+
+
+
+
 
 
 }
