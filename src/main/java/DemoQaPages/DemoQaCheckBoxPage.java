@@ -25,6 +25,16 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
+    public DemoQaCheckBoxPage clickOnWorkSpaceExtandButton(){
+        click(XpathLocators.workSpaceExtandButton);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnOfficeExtandButton(){
+        click(XpathLocators.officeExtandButton);
+        return this;
+    }
+
     public DemoQaCheckBoxPage clickOnHomeCheckBox() {
         click(XpathLocators.homeCheckBox);
         return this;
@@ -45,8 +55,63 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
-    public DemoQaCheckBoxPage clickOnDownLoadsCheckBox(){
+    public DemoQaCheckBoxPage clickOnWorkSpaceCheckBox(){
+        click(XpathLocators.workSpaceCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnReactCheckBox(){
+        click(XpathLocators.reactWorkSpaceCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnAngularCheckBox(){
+        click(XpathLocators.angularWorkSpaceCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnVeuCheckBox(){
+        click(XpathLocators.veuWorkSpaceCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnOfficeCheckBox(){
+        click(XpathLocators.officeCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnPublicCheckBox(){
+        click(XpathLocators.publicOfficeCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnPrivateOfficeCheckBox(){
+        click(XpathLocators.privateOfficeCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnClassifiedOfficeCheckBox(){
+        click(XpathLocators.classifiedOfficeCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnGeneralOfficeCheckBox(){
+        click(XpathLocators.generalOffice);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnDownloadsCheckBox(){
         click(XpathLocators.downloadsCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnWordFileDownloadsCheckBox(){
+        click(XpathLocators.wordFileCheckBox);
+        return this;
+    }
+
+    public DemoQaCheckBoxPage clickOnExcelFileDownloadsCheckBox(){
+        click(XpathLocators.excelFileCheckBox);
         return this;
     }
 
@@ -78,7 +143,7 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         verifyCheckBoxChecked(XpathLocators.homeCheckBox, "class", "rct-icon-half-check","Home checkbox is not partial checked.");
         return this;
     }
-
+    //Desktop
     public DemoQaCheckBoxPage verifyDesktopIsPartialCheck(){
         verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-half-check","Desktop checkbox is not partial checked.");
         return this;
@@ -98,10 +163,82 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
         return this;
     }
+    //Documents
+    public DemoQaCheckBoxPage verifyDocumentsIsPartialCheck(){
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-half-check","Documents checkbox is not partial checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyDocumentsCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-check","Documents checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyWorkSpaceCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "class", "rct-icon-check","WorkSpace checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyWorkSpaceCheckBoxIsPartialChecked(){
+        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "class", "rct-icon-half-check","WorkSpace checkbox is not partial checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyReactCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.reactWorkSpaceCheckBox, "class", "rct-icon-check","React checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyAngularCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.angularWorkSpaceCheckBox, "class", "rct-icon-check","Angular checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyVeuCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.veuWorkSpaceCheckBox, "class", "rct-icon-check","Veu checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyOfficeCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "class", "rct-icon-check","Office checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyOfficeCheckBoxIsPartialChecked(){
+        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "class", "rct-icon-half-check","Office checkbox is not partial checked.");
+        return this;
+    }
 
 
+    public DemoQaCheckBoxPage verifyPublicCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.publicOfficeCheckBox, "class", "rct-icon-check","Public checkbox is not checked.");
+        return this;
+    }
 
+    public DemoQaCheckBoxPage verifyPrivateCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.privateOfficeCheckBox, "class", "rct-icon-check","Private checkbox is not checked.");
+        return this;
+    }
 
+    public DemoQaCheckBoxPage verifyClassifiedCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.classifiedOfficeCheckBox, "class", "rct-icon-check","Classified checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyGeneralCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.generalOffice, "class", "rct-icon-check","General checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyDownloadsCheckBoxIsChecked(){
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-check","Downloads checkbox is not checked.");
+        return this;
+    }
+
+    public DemoQaCheckBoxPage verifyDownloadsCheckBoxIsPartialChecked(){
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-half-check","Downloads checkbox is not partial checked.");
+        return this;
+    }
 
     public DemoQaCheckBoxPage verifyResoultText(String string){
         verifyTexts(XpathLocators.resoultText,

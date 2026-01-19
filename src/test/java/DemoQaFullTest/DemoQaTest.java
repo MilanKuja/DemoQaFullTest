@@ -34,8 +34,15 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnDesktopExtandButton().clickOnDesktopCheckBox().verifyAllDesktopCheckBoxesAreChecked()
                 .verifyResoultText("You have selected : desktop notes commands").clickOnDesktopCheckBox()
                 .clickOnNotesCheckBox().verifyHomeIsPartialCheck().verifyDesktopIsPartialCheck().verifyResoultText("You have selected : notes")
-                .clickOnNotesCheckBox().clickOnDesktopExtandButton();
-                //Downloads CheckBox
+                .clickOnNotesCheckBox().clickOnDesktopExtandButton()
+                //Documents CheckBox
+                .clickOnDocumentsExtandButton().clickOnDocumentsCheckBox().verifyHomeIsPartialCheck().verifyDocumentsCheckBoxIsChecked()
+                .clickOnDocumentsCheckBox().clickOnDocumentsExtandButton()
+                .clickOnDocumentsExtandButton().clickOnOfficeExtandButton().clickOnWorkSpaceExtandButton().clickOnOfficeExtandButton()
+                .clickOnReactCheckBox().clickOnAngularCheckBox().clickOnPrivateOfficeCheckBox().clickOnClassifiedOfficeCheckBox()
+                .verifyDocumentsIsPartialCheck()
+                .clickOnWorkSpaceCheckBox().clickOnOfficeCheckBox()
+                .verifyOfficeCheckBoxIsChecked().verifyWorkSpaceCheckBoxIsChecked().verifyHomeIsPartialCheck();
 
 
 

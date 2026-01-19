@@ -39,6 +39,17 @@ public class XpathLocators  {
     public static final String documentsCheckBox = "//label[@for='tree-node-documents']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String workSpaceCheckBox = "//label[@for='tree-node-workspace']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String officeCheckBox = "//label[@for='tree-node-office']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    //Documents WorkSpace
+    public static final String workSpaceExtandButton = "//label[@for='tree-node-workspace']/preceding-sibling::button";
+    public static final String reactWorkSpaceCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String angularWorkSpaceCheckBox =  "//label[@for='tree-node-angular']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String veuWorkSpaceCheckBox =  "//label[@for='tree-node-vue']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    //Documents Office
+    public static final String officeExtandButton = "//label[@for='tree-node-office']/preceding-sibling::button";
+    public static final String publicOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String privateOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String classifiedOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String generalOffice = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Downloads
     public static final String downloadsExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
     public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
