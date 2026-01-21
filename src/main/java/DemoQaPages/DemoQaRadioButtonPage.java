@@ -24,8 +24,13 @@ public class DemoQaRadioButtonPage extends DemoQaHomePage{
         return this;
     }
 
-    public DemoQaRadioButtonPage verifyResoultMessage(String message){
+    public DemoQaRadioButtonPage verifyResultMessage(String message){
         verifyText(XpathLocators.radioButtonResultMessage,message,"Radio button message is not correct.");
         return this;
+    }
+
+    public DemoQaWebTablesPage clickOnWebTablesDropDown(){
+        click(XpathLocators.webTablesDrop);
+        return new DemoQaWebTablesPage();
     }
 }

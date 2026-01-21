@@ -51,7 +51,12 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnRadioButtonDrop()
 
                 //Radio buttons
-                .verifyNoRadioButtonIsDisabled().clickOnYesRadioButton().verifyResoultMessage("Yes").clickOnImpressiveRadioButton().verifyResoultMessage("Impressive");
+                .verifyNoRadioButtonIsDisabled().clickOnYesRadioButton().verifyResultMessage("Yes").clickOnImpressiveRadioButton().verifyResultMessage("Impressive")
+                .clickOnWebTablesDropDown()
+                //WebTalbes
+                ;
+
+
 
 
 

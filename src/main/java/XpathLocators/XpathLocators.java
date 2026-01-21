@@ -8,6 +8,7 @@ public class XpathLocators  {
     public static final String textBoxDrop = "//li[@id = 'item-0']//span[text() = 'Text Box']";
     public static final String checkBoxDrop = "//li[@id = 'item-1']//span[text() = 'Check Box']";
     public static final String radioButtonDrop = "//li[@id = 'item-2']//span[text() = 'Radio Button']";
+    public static final String webTablesDrop = "//li[@id = 'item-3']//span[text() = 'Web Tables']";
 
 
 
@@ -26,6 +27,7 @@ public class XpathLocators  {
     public static final String emailOutput = "//p[@id = 'email']";
     public static final String currentAddressOutput = "//p[@id = 'currentAddress']";
     public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
+
 
     //CheckBox:
     public static final String homeExpandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
@@ -66,7 +68,18 @@ public class XpathLocators  {
     public static final String radioYesButton = "//label[@for = 'yesRadio']";
     public static final String radioNoButton = "//input[@id = 'noRadio']";
     public static final String radioImpressiveButton = "//label[@for = 'impressiveRadio']";
-    public static final String radioButtonResultMessage = "//p//span[@class = 'text-success']";
+    public static final String radioButtonResultMessage = "//span[@class = 'text-success']";
+
+    //WebbTalbes
+    public static final String addButton = "//button[@id = 'addNewRecordButton']";
+    public static final String searchFiled = "//button[@id = 'searchBox']";
+    public static final String searchButton = "//div[contains(@class, 'group-append')]";
+    public static String editRecord(int recordNumber) {
+        return "//span[@id='edit-record-" + recordNumber + "']";
+    }
+    public static String deleteRecord(int recordNumber) {
+        return "//span[@id='edit-record-" + recordNumber + "']";
+    }
 
 
 
