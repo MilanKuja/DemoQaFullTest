@@ -6,32 +6,32 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
 
 
     public DemoQaCheckBoxPage clickOnHomeExtandButton() {
-        click(XpathLocators.homeExtandButton);
+        click(XpathLocators.homeExpandButton);
         return this;
     }
 
     public DemoQaCheckBoxPage clickOnDesktopExtandButton() {
-        click(XpathLocators.desktopExtandButton);
+        click(XpathLocators.desktopExpandButton);
         return this;
     }
 
     public DemoQaCheckBoxPage clickOnDocumentsExtandButton() {
-        click(XpathLocators.documentsExtandButton);
+        click(XpathLocators.documentsExpandButton);
         return this;
     }
 
     public DemoQaCheckBoxPage clickOnDownloadsExtandButton() {
-        click(XpathLocators.downloadsExtandButton);
+        click(XpathLocators.downloadsExpandButton);
         return this;
     }
 
     public DemoQaCheckBoxPage clickOnWorkSpaceExtandButton(){
-        click(XpathLocators.workSpaceExtandButton);
+        click(XpathLocators.workSpaceExpandButton);
         return this;
     }
 
     public DemoQaCheckBoxPage clickOnOfficeExtandButton(){
-        click(XpathLocators.officeExtandButton);
+        click(XpathLocators.officeExpandButton);
         return this;
     }
 
@@ -250,14 +250,14 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
     }
 
     public DemoQaCheckBoxPage verifyResoultText(String string){
-        verifyTexts(XpathLocators.resoultText,
+        verifyTexts(XpathLocators.resultText,
                 string,
                 "Resoult text is not correct");
         return this;
     }
 
     public DemoQaCheckBoxPage confirmationMessageIsNotVisible(){
-        elementIsNotVisible(XpathLocators.resoultText);
+        elementIsNotVisible(XpathLocators.resultText);
         return this;
     }
 
@@ -266,12 +266,12 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
             elementIsVisible(XpathLocators.desktopCheckBox);
             elementIsVisible(XpathLocators.notesCheckBox);
             elementIsVisible(XpathLocators.commandsCheckBox);
-            elementIsVisible(XpathLocators.desktopExtandButton);
+            elementIsVisible(XpathLocators.desktopExpandButton);
             elementIsVisible(XpathLocators.documentsCheckBox);
             elementIsVisible(XpathLocators.workSpaceCheckBox);
             elementIsVisible(XpathLocators.officeCheckBox);
-            elementIsVisible(XpathLocators.workSpaceExtandButton);
-            elementIsVisible(XpathLocators.officeExtandButton);
+            elementIsVisible(XpathLocators.workSpaceExpandButton);
+            elementIsVisible(XpathLocators.officeExpandButton);
             elementIsVisible(XpathLocators.reactWorkSpaceCheckBox);
             elementIsVisible(XpathLocators.angularWorkSpaceCheckBox);
             elementIsVisible(XpathLocators.veuWorkSpaceCheckBox);
@@ -281,7 +281,7 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
             elementIsVisible(XpathLocators.downloadsCheckBox);
             elementIsVisible(XpathLocators.wordFileCheckBox);
             elementIsVisible(XpathLocators.excelFileCheckBox);
-            elementIsVisible(XpathLocators.downloadsExtandButton);
+            elementIsVisible(XpathLocators.downloadsExpandButton);
         } catch (Exception e){
             System.out.println("Element is not visible");
         }

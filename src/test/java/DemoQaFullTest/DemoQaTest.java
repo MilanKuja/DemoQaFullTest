@@ -49,7 +49,10 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnExpandAll().allElementsAreVisible()
                 .clickOnCollapseAll()
                 .clickOnRadioButtonDrop()
-                ;
+
+                //Radio buttons
+                .verifyNoRadioButtonIsDisabled().clickOnYesRadioButton().verifyResoultMessage("Yes").clickOnImpressiveRadioButton().verifyResoultMessage("Impressive");
+
 
 
 

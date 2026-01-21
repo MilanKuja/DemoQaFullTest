@@ -28,39 +28,45 @@ public class XpathLocators  {
     public static final String permanentAddressOutput = "//p[@id = 'permanentAddress']";
 
     //CheckBox:
-    public static final String homeExtandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
+    public static final String homeExpandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
     public static final String homeCheckBox = "//label[@for='tree-node-home']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Desktop:
-    public static final String desktopExtandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
+    public static final String desktopExpandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
     public static final String desktopCheckBox = "//label[@for='tree-node-desktop']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String notesCheckBox = "//label[@for='tree-node-notes']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String commandsCheckBox = "//label[@for='tree-node-commands']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Documents
-    public static final String documentsExtandButton = "//label[@for='tree-node-documents']/preceding-sibling::button";
+    public static final String documentsExpandButton = "//label[@for='tree-node-documents']/preceding-sibling::button";
     public static final String documentsCheckBox = "//label[@for='tree-node-documents']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String workSpaceCheckBox = "//label[@for='tree-node-workspace']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String officeCheckBox = "//label[@for='tree-node-office']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Documents WorkSpace
-    public static final String workSpaceExtandButton = "//label[@for='tree-node-workspace']/preceding-sibling::button";
+    public static final String workSpaceExpandButton = "//label[@for='tree-node-workspace']/preceding-sibling::button";
     public static final String reactWorkSpaceCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String angularWorkSpaceCheckBox =  "//label[@for='tree-node-angular']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String veuWorkSpaceCheckBox =  "//label[@for='tree-node-vue']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Documents Office
-    public static final String officeExtandButton = "//label[@for='tree-node-office']/preceding-sibling::button";
+    public static final String officeExpandButton = "//label[@for='tree-node-office']/preceding-sibling::button";
     public static final String publicOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String privateOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String classifiedOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String generalOffice = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Downloads
-    public static final String downloadsExtandButton = "//label[@for='tree-node-downloads']/preceding-sibling::button";
+    public static final String downloadsExpandButton = "//label[@for='tree-node-downloads']/preceding-sibling::button";
     public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String wordFileCheckBox = "//label[@for='tree-node-wordFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     public static final String excelFileCheckBox = "//label[@for='tree-node-excelFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
     //Resoult
-    public static final String resoultText = "//div[@id = 'result']";
-    //Plus and Minus extadns
+    public static final String resultText = "//div[@id = 'result']";
+    //Plus and Minus expands
     public static final String plusExpandAll = "//button[@aria-label= 'Expand all']";
     public static final String minusCollapseAll = "//button[@aria-label= 'Collapse all']";
+
+    //Radio Buttons
+    public static final String radioYesButton = "//label[@for = 'yesRadio']";
+    public static final String radioNoButton = "//input[@id = 'noRadio']";
+    public static final String radioImpressiveButton = "//label[@for = 'impressiveRadio']";
+    public static final String radioButtonResultMessage = "//p//span[@class = 'text-success']";
 
 
 
