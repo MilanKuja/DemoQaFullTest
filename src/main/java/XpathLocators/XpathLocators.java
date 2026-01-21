@@ -80,6 +80,14 @@ public class XpathLocators  {
     public static String deleteRecord(int recordNumber) {
         return "//span[@id='edit-record-" + recordNumber + "']";
     }
+    //Column header
+    public static final String firstNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='First Name']";
+    public static final String lastNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Last Name']";
+    public static final String ageColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Age']";
+    public static final String emailColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Email']";
+    public static final String salaryColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Salary']";
+    public static final String departmentColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Department']";
+    public static final String actiionColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Action']";
 
 
 
