@@ -70,7 +70,7 @@ public class XpathLocators  {
     public static final String radioImpressiveButton = "//label[@for = 'impressiveRadio']";
     public static final String radioButtonResultMessage = "//span[@class = 'text-success']";
 
-    //WebbTalbes
+    //WebTables
     public static final String addButton = "//button[@id = 'addNewRecordButton']";
     public static final String searchFiled = "//button[@id = 'searchBox']";
     public static final String searchButton = "//div[contains(@class, 'group-append')]";
@@ -88,6 +88,22 @@ public class XpathLocators  {
     public static final String salaryColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Salary']";
     public static final String departmentColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Department']";
     public static final String actiionColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Action']";
+    //Add button
+    public static final String addFirstNameInput = "//input[@id = 'firstName']";
+    public static final String addLastNameInput = "//input[@id = 'lastName']";
+    public static final String addEmailInput = "//input[@id = 'userEmail']";
+    public static final String addAgeInput = "//input[@id = 'age']";
+    public static final String addSalaryInput = "//input[@id = 'salary']";
+    public static final String addDepartmantInput = "//input[@id = 'department']";
+    //Labels
+    public static final String addFirstNameLabel = "//label[@id = 'firstName-label']";
+    public static final String addLastNameLabel = "//label[@id = 'lastName-label']";
+    public static final String addEmailLabel = "//label[@id = 'userEmail-label']";
+    public static final String addAgeLabel = "//label[@id = 'age-label']";
+    public static final String addSalaryLabel = "//label[@id = 'salary-label']";
+    public static final String addDepartmantLabel = "//label[@id = 'department-label']";
+    public static final String addSubmitButton = "//button[@id = 'submit']";
+
 
 
 
