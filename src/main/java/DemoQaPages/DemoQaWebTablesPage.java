@@ -51,7 +51,7 @@ public class DemoQaWebTablesPage extends DemoQaHomePage{
     }
 
     public DemoQaWebTablesPage typeDepartmant(String string){
-        sendKeys(XpathLocators.addLastNameInput, string);
+        sendKeys(XpathLocators.addDepartmantInput, string);
         return this;
     }
 

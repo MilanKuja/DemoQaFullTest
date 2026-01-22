@@ -65,7 +65,15 @@ public class DemoQaTest extends DemoQaHomePage{
                 .deleteInput(XpathLocators.addEmailInput).typeEmail("crnigavra@gmail.com")
                 .deleteInput(XpathLocators.addAgeInput).typeAge("4")
                 .deleteInput(XpathLocators.addSalaryInput).typeSalary("35000")
-                .deleteInput(XpathLocators.addDepartmantInput).typeDepartmant("Kucni pas").clickOnSubmitButton();
+                .deleteInput(XpathLocators.addDepartmantInput).typeDepartmant("Kucni pas").clickOnSubmitButton()
+                .clickOnDeleteRecord(3)
+                .clicOnAddButton()
+                .typeFirstName("Milutin")
+                .typeLastName("Ilic")
+                .typeEmail("zutimica@gmail.com")
+                .typeAge("5")
+                .typeSalary("800000")
+                .typeDepartmant("Gazda na kucu").clickOnSubmitButton();
 
 
 
