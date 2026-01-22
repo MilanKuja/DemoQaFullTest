@@ -39,7 +39,7 @@ public class BaseMethods extends Driver {
         actions.contextClick(findElement(xpath)).perform();
     }
 
-    public void dubleClick(String xpath){
+    public void doubleClick(String xpath){
         waitForElementToBeClickable(xpath);
         Actions actions = new Actions(getDriver());
         actions.doubleClick(findElement(xpath)).perform();

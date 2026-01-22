@@ -1,6 +1,7 @@
 package DemoQaFullTest;
 
 import DemoQaPages.DemoQaHomePage;
+import XpathLocators.XpathLocators;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -58,8 +59,10 @@ public class DemoQaTest extends DemoQaHomePage{
                 .verifyResultMessage("Impressive")
                 .clickOnWebTablesDropDown()
                 //WebTalbes
-                .clickOnDeleteRecord(1)
-                ;
+                .clickOnDeleteRecord(1).clickOnEditRecord(2)
+                .dubleClickInEditForm(XpathLocators.addFirstNameInput).typeFirstName("Gavrilo")
+                .doubleClick(XpathLocators.addLastNameInput) ;
+
 
 
 

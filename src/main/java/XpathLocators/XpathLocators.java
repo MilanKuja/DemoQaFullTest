@@ -78,7 +78,7 @@ public class XpathLocators  {
         return "//span[@id='edit-record-" + recordNumber + "']";
     }
     public static String deleteRecord(int recordNumber) {
-        return "//span[@id='edit-record-" + recordNumber + "']";
+        return "//span[@id='delete-record-" + recordNumber + "']";
     }
     //Column header
     public static final String firstNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='First Name']";
