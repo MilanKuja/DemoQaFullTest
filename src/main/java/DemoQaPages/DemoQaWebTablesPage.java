@@ -19,7 +19,7 @@ public class DemoQaWebTablesPage extends DemoQaHomePage{
         return this;
     }
 
-    public DemoQaWebTablesPage dubleClickInEditForm(String xpath){
+    public DemoQaWebTablesPage doubleClickInEditForm(String xpath){
         doubleClick(xpath);
         return this;
     }
@@ -52,6 +52,16 @@ public class DemoQaWebTablesPage extends DemoQaHomePage{
 
     public DemoQaWebTablesPage typeDepartmant(String string){
         sendKeys(XpathLocators.addLastNameInput, string);
+        return this;
+    }
+
+    public DemoQaWebTablesPage deleteInput(String xpath){
+        clearInput(xpath);
+        return this;
+    }
+
+    public DemoQaWebTablesPage clickOnSubmitButton(){
+        click(XpathLocators.submitButton);
         return this;
     }
 

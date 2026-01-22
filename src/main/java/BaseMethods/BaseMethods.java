@@ -187,6 +187,12 @@ public class BaseMethods extends Driver {
         findElement(xpath).sendKeys(string);
     }
 
+    public void clearInput(String xpath){
+        findElement(xpath).click();
+        findElement(xpath).sendKeys(Keys.CONTROL + "a");
+        findElement(xpath).sendKeys(Keys.BACK_SPACE);
+    }
+
     public void switchToNewTab(){
         String originalTab = getDriver().getWindowHandle();
         Set<String> allTabs = getDriver().getWindowHandles();

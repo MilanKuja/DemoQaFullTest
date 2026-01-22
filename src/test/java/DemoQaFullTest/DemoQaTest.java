@@ -60,8 +60,12 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnWebTablesDropDown()
                 //WebTalbes
                 .clickOnDeleteRecord(1).clickOnEditRecord(2)
-                .dubleClickInEditForm(XpathLocators.addFirstNameInput).typeFirstName("Gavrilo")
-                .doubleClick(XpathLocators.addLastNameInput) ;
+                .deleteInput(XpathLocators.addFirstNameInput).typeFirstName("Gavrilo")
+                .deleteInput(XpathLocators.addLastNameInput).typeLastName("Ilic")
+                .deleteInput(XpathLocators.addEmailInput).typeEmail("crnigavra@gmail.com")
+                .deleteInput(XpathLocators.addAgeInput).typeAge("4")
+                .deleteInput(XpathLocators.addSalaryInput).typeSalary("35000")
+                .deleteInput(XpathLocators.addDepartmantInput).typeDepartmant("Kucni pas").clickOnSubmitButton();
 
 
 
@@ -70,7 +74,8 @@ public class DemoQaTest extends DemoQaHomePage{
 
 
 
-        ;
+
+
 
 
 
