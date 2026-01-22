@@ -5,7 +5,7 @@ import XpathLocators.XpathLocators;
 public class DemoQaRadioButtonPage extends DemoQaHomePage{
 
     public DemoQaRadioButtonPage clickOnYesRadioButton(){
-        actionClick(XpathLocators.radioYesButton);
+        click(XpathLocators.radioYesButton);
         return this;
     }
 

@@ -158,7 +158,7 @@ public class BaseMethods extends Driver {
     }
 
     public void verifyText(String xpath, String text, String message){
-        waitForElementToBeVisible(xpath);
+        waitForElementLocatedBy(xpath);
         Assertions.assertEquals(text, getText(xpath), "Text is not correct");
     }
 
