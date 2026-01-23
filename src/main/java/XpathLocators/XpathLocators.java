@@ -72,7 +72,7 @@ public class XpathLocators  {
 
     //WebTables
     public static final String addButton = "//button[@id = 'addNewRecordButton']";
-    public static final String searchFiled = "//button[@id = 'searchBox']";
+    public static final String searchFiled = "//input[@id = 'searchBox']";
     public static final String searchButton = "//div[contains(@class, 'group-append')]";
     public static String editRecord(int recordNumber) {
         return "//span[@id='edit-record-" + recordNumber + "']";

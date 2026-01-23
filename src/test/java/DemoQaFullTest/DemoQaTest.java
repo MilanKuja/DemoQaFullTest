@@ -73,7 +73,9 @@ public class DemoQaTest extends DemoQaHomePage{
                 .typeEmail("zutimica@gmail.com")
                 .typeAge("5")
                 .typeSalary("800000")
-                .typeDepartmant("Gazda na kucu").clickOnSubmitButton();
+                .typeDepartmant("Gazda na kucu").clickOnSubmitButton()
+                .searchRecord("Gavrilo")
+                .clickOnFirstNameHeader();
 
 
 
