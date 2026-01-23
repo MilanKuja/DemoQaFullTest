@@ -76,4 +76,10 @@ public class DemoQaWebTablesPage extends DemoQaHomePage {
    }
 
 
+   public DemoQaButtonsPage clickOnButtonsDrop(){
+        click(XpathLocators.buttonsDrop);
+        return new DemoQaButtonsPage();
+   }
+
+
 }

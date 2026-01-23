@@ -75,7 +75,11 @@ public class DemoQaTest extends DemoQaHomePage{
                 .typeSalary("800000")
                 .typeDepartmant("Gazda na kucu").clickOnSubmitButton()
                 .searchRecord("Gavrilo")
-                .clickOnFirstNameHeader();
+                .clickOnFirstNameHeader()
+                .clickOnButtonsDrop()
+        ;
+
+
 
 
 

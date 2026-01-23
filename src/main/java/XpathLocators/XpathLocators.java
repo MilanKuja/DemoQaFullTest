@@ -9,6 +9,7 @@ public class XpathLocators  {
     public static final String checkBoxDrop = "//li[@id = 'item-1']//span[text() = 'Check Box']";
     public static final String radioButtonDrop = "//li[@id = 'item-2']//span[text() = 'Radio Button']";
     public static final String webTablesDrop = "//li[@id = 'item-3']//span[text() = 'Web Tables']";
+    public static final String buttonsDrop = "//li[@id = 'item-4']//span[text() = 'Buttons']";
 
 
 
@@ -80,6 +81,7 @@ public class XpathLocators  {
     public static String deleteRecord(int recordNumber) {
         return "//span[@id='delete-record-" + recordNumber + "']";
     }
+    public static final String rows = "//div[@class='rt-tr-group']//div[@class='rt-td']";
     //Column header
     public static final String firstNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='First Name']";
     public static final String lastNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Last Name']";

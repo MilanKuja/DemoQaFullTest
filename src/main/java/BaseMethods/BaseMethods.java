@@ -195,20 +195,26 @@ public class BaseMethods extends Driver {
         findElement(xpath).sendKeys(Keys.BACK_SPACE);
     }
 
-    public void isSortedAlphabetically(String xpath) {
-        waitForPresenceOfElement(xpath);
-        List<WebElement> elements = findElements(xpath);
+    public void isSortedAlphabetically(String xpath, int totalColumns) {
+        for (int col = 1; col <= totalColumns; col++) {
 
-        List<String> actual = elements.stream()
-                .map(WebElement::getText)
-                .filter(text -> !text.isBlank())
-                .toList();
+            // XPath za kolonu 'col' u svim redovima
+            String columnXpath = xpath + "[" + col + "]";
 
-        List<String> expected = new ArrayList<>(actual);
-        expected.sort(String.CASE_INSENSITIVE_ORDER);
+            waitForPresenceOfElement(xpath);
+            List<WebElement> elements = findElements(xpath);
 
-        Assertions.assertEquals(expected,actual, "Podaci nisu rasporedjeni po abecedi");
+            List<String> actual = elements.stream()
+                    .map(WebElement::getText)
+                    .filter(text -> !text.isBlank())
+                    .toList();
 
+            List<String> expected = new ArrayList<>(actual);
+            expected.sort(String.CASE_INSENSITIVE_ORDER);
+
+            Assertions.assertEquals(expected, actual, "Podaci nisu rasporedjeni po abecedi");
+
+        }
     }
 
     public void switchToNewTab(){
