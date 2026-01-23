@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -193,6 +195,22 @@ public class BaseMethods extends Driver {
         findElement(xpath).sendKeys(Keys.BACK_SPACE);
     }
 
+    public void isSortedAlphabetically(String xpath) {
+        waitForPresenceOfElement(xpath);
+        List<WebElement> elements = findElements(xpath);
+
+        List<String> actual = elements.stream()
+                .map(WebElement::getText)
+                .filter(text -> !text.isBlank())
+                .toList();
+
+        List<String> expected = new ArrayList<>(actual);
+        expected.sort(String.CASE_INSENSITIVE_ORDER);
+
+        Assertions.assertEquals(expected,actual, "Podaci nisu rasporedjeni po abecedi");
+
+    }
+
     public void switchToNewTab(){
         String originalTab = getDriver().getWindowHandle();
         Set<String> allTabs = getDriver().getWindowHandles();
@@ -245,8 +263,12 @@ public class BaseMethods extends Driver {
         }
     }
 
-    public WebElement findElement(String string){
-        return  getDriver().findElement(By.xpath(string));
+    public WebElement findElement(String xpath){
+        return  getDriver().findElement(By.xpath(xpath));
+    }
+
+    public List<WebElement> findElements(String xpath) {
+        return getDriver().findElements(By.xpath(xpath));
     }
 
 
