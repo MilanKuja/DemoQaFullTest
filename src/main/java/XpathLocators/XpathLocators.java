@@ -106,6 +106,10 @@ public class XpathLocators  {
     public static final String addDepartmantLabel = "//label[@id = 'department-label']";
     public static final String addSubmitButton = "//button[@id = 'submit']";
 
+    //Buttons
+    public static final String doubleClickButton = "//button[@id = 'doubleClickBtn']";
+    public static final String rightClickButton = "//button[@id = 'rightClickBtn']";
+    public static final String clickMeButton = "///button[@id = '9Yniu']";
 
 
 
