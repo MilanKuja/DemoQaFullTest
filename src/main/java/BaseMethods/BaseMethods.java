@@ -217,7 +217,7 @@ public class BaseMethods extends Driver {
         }
     }
 
-    public void switchToNewTab(){
+    public String  switchToNewTab(){
         String originalTab = getDriver().getWindowHandle();
         Set<String> allTabs = getDriver().getWindowHandles();
         for (String tab : allTabs) {
@@ -226,6 +226,12 @@ public class BaseMethods extends Driver {
                 break;
             }
         }
+        return originalTab;
+    }
+
+    public void closeTabAndReturnTo(String originalTab) {
+        getDriver().close();
+        getDriver().switchTo().window(originalTab);
     }
 
     public void addValuePlusMinus(String string, String plusXpath, String minusXpath, int targetValue) {
