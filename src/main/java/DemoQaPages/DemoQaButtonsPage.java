@@ -15,4 +15,14 @@ public class DemoQaButtonsPage extends DemoQaHomePage{
                 "Doubleclick message is not correct!!");
         return this;
     }
+
+    public DemoQaButtonsPage rightClickRightClickButton() {
+        rightClick(XpathLocators.rightClickButton);
+        return this;
+    }
+
+    public DemoQaButtonsPage veirfyRightClickMessage(String text) {
+        verifyText(XpathLocators.rightClickMessage, text, "Right click message is not correct!!");
+        return this;
+    }
 }
