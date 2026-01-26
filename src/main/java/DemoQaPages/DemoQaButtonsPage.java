@@ -39,4 +39,9 @@ public class DemoQaButtonsPage extends DemoQaHomePage{
                 "Click me message is not correct!!");
         return this;
     }
+
+    public DemoQaLinksPage clickOnLinksDropDown() {
+        click(XpathLocators.linksDrop);
+        return new DemoQaLinksPage();
+    }
 }

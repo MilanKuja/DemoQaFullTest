@@ -10,6 +10,7 @@ public class XpathLocators  {
     public static final String radioButtonDrop = "//li[@id = 'item-2']//span[text() = 'Radio Button']";
     public static final String webTablesDrop = "//li[@id = 'item-3']//span[text() = 'Web Tables']";
     public static final String buttonsDrop = "//li[@id = 'item-4']//span[text() = 'Buttons']";
+    public static final String linksDrop = "//li[@id = 'item-5']//span[text() = 'Links']";
 
 
 
@@ -114,6 +115,9 @@ public class XpathLocators  {
     public static final String rightClickMessage = "//p[@id = 'rightClickMessage']";
     public static final String clickMeMessage = "//p[@id = 'dynamicClickMessage']";
 
+
+    //Links
+    public static final String simpleLink = "//a[@id = 'simpleLink']";
 
 }
 
