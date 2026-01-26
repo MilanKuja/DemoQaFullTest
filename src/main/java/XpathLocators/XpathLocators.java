@@ -118,6 +118,7 @@ public class XpathLocators  {
 
     //Links
     public static final String simpleLink = "//a[@id = 'simpleLink']";
+    public static final String dynamicLink = "//a[@id = 'dynamicLink']";
 
 }
 
