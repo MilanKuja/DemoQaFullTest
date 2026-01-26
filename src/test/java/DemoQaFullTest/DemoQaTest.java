@@ -81,8 +81,7 @@ public class DemoQaTest extends DemoQaHomePage{
                 .rightClickRightClickButton().veirfyRightClickMessage("You have done a right click")
                 .clickOnClickMeButton().verifyClickMeButtonMessage("You have done a dynamic click")
                 .clickOnLinksDropDown()
-                .clickOnSimpleLink()
-                .returnToMainTab();
+                .clickOnSimpleLink().returnToMainTab();
 
 
 
