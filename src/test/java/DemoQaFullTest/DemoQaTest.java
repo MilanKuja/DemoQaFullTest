@@ -77,6 +77,7 @@ public class DemoQaTest extends DemoQaHomePage{
                 .searchRecord("Gavrilo")
                 .clickOnFirstNameHeader()
                 .clickOnButtonsDrop()
+                .doubleClickButtonDoubleClick().verifyDoubleClickMessage("You have done a double click")
         ;
 
 
