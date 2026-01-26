@@ -22,7 +22,21 @@ public class DemoQaButtonsPage extends DemoQaHomePage{
     }
 
     public DemoQaButtonsPage veirfyRightClickMessage(String text) {
-        verifyText(XpathLocators.rightClickMessage, text, "Right click message is not correct!!");
+        verifyText(XpathLocators.rightClickMessage,
+                text,
+                "Right click message is not correct!!");
+        return this;
+    }
+
+    public DemoQaButtonsPage clickOnClickMeButton() {
+        click(XpathLocators.clickMeButton);
+        return this;
+    }
+
+    public DemoQaButtonsPage verifyClickMeButtonMessage(String text) {
+        verifyText(XpathLocators.clickMeMessage,
+                text,
+                "Click me message is not correct!!");
         return this;
     }
 }

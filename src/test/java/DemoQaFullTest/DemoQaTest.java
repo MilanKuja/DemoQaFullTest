@@ -79,8 +79,10 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnButtonsDrop()
                 .doubleClickButtonDoubleClick().verifyDoubleClickMessage("You have done a double click")
                 .rightClickRightClickButton().veirfyRightClickMessage("You have done a right click")
+                .clickOnClickMeButton().verifyClickMeButtonMessage("You have done a dynamic click");
 
-        ;
+
+
 
 
 

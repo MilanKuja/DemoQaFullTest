@@ -109,10 +109,10 @@ public class XpathLocators  {
     //Buttons
     public static final String doubleClickButton = "//button[@id = 'doubleClickBtn']";
     public static final String rightClickButton = "//button[@id = 'rightClickBtn']";
-    public static final String clickMeButton = "///button[@id = '9Yniu']";
+    public static final String clickMeButton = "//button[text() = 'Click Me']";
     public static final String doubleClickMessage = "//p[@id = 'doubleClickMessage']";
     public static final String rightClickMessage = "//p[@id = 'rightClickMessage']";
-    public static final String clickMeMessage = "//p[@id = '9Yniu']";
+    public static final String clickMeMessage = "//p[@id = 'dynamicClickMessage']";
 
 
 }
