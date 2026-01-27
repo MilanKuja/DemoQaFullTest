@@ -125,7 +125,7 @@ public class XpathLocators  {
     public static final String movedLink = "//a[@id = 'moved']";
     public static final String badRequestLink = "//a[@id = 'bad-request']";
     public static final String unauthorizedLink = "//a[@id = 'unauthorized']";
-    public static final String forbiddendLink = "//a[@id = 'forbidden']";
+    public static final String forbiddenLink = "//a[@id = 'forbidden']";
     public static final String notFoundLink = "//a[@id = 'invalid-url']";
     public static final String responseLink = "//p[@id = 'linkResponse']";
 

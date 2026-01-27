@@ -15,7 +15,7 @@ public class DemoQaTest extends DemoQaHomePage{
 
 
     @Test
-    public void testing(){
+    public void testing() throws InterruptedException {
         DemoQaHomePage demoQaHomePage = new DemoQaHomePage();
         demoQaHomePage.clickOnElements()
                 //TextBox
@@ -83,13 +83,13 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnLinksDropDown()
                 .clickOnSimpleLink().returnToMainTab()
                 .clickOnDynamicLink().returnToMainTab()
-                .clickOnCreatedLink().verifyResponse("201")
-                .clickOnNoContent().verifyResponse("204")
-                .clickOnMoved().verifyResponse("301")
-                .clickOnBadRequest().verifyResponse("400 ")
-                .clickOnUnauthorized().verifyResponse("401")
-                .clickOnForbidden().verifyResponse("403")
-                .clickOnNotFound().verifyResponse("404");
+                .clickOnCreatedLink().verifyResponseForCreated()
+                .clickOnNoContent().verifyResponseForNoContent()
+                .clickOnMoved().verifyResponseForMoved()
+                .clickOnBadRequest().verifyResponseForBadRequest()
+                .clickOnUnauthorized().verifyResponseForUnauthorized()
+                .clickOnForbidden().verifyResponseForForbidden()
+                .clickOnNotFound().verifyResponseForNotFound();
 
 
 
