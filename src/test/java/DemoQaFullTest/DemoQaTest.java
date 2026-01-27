@@ -82,7 +82,14 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnClickMeButton().verifyClickMeButtonMessage("You have done a dynamic click")
                 .clickOnLinksDropDown()
                 .clickOnSimpleLink().returnToMainTab()
-                .clickOnDynamicLink().returnToMainTab();
+                .clickOnDynamicLink().returnToMainTab()
+                .clickOnCreatedLink().verifyResponse("201")
+                .clickOnNoContent().verifyResponse("204")
+                .clickOnMoved().verifyResponse("301")
+                .clickOnBadRequest().verifyResponse("400 ")
+                .clickOnUnauthorized().verifyResponse("401")
+                .clickOnForbidden().verifyResponse("403")
+                .clickOnNotFound().verifyResponse("404");
 
 
 

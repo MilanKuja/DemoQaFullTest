@@ -174,6 +174,12 @@ public class BaseMethods extends Driver {
         Assertions.assertTrue(findElement(xpath).getAttribute(attribute).contains(contains), message);
     }
 
+    public void verifyResponse(String xpath, String text, String message) {
+        waitForPresenceOfElement(xpath);
+        Assertions.assertTrue(getText(xpath).contains(text)
+                , message);
+    }
+
 
 
     //Other methods

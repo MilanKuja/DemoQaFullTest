@@ -119,6 +119,15 @@ public class XpathLocators  {
     //Links
     public static final String simpleLink = "//a[@id = 'simpleLink']";
     public static final String dynamicLink = "//a[@id = 'dynamicLink']";
+    //Api sending links
+    public static final String createdLink = "//a[@id = 'created']";
+    public static final String noContentLink = "//a[@id = 'no-content']";
+    public static final String movedLink = "//a[@id = 'moved']";
+    public static final String badRequestLink = "//a[@id = 'bad-request']";
+    public static final String unauthorizedLink = "//a[@id = 'unauthorized']";
+    public static final String forbiddendLink = "//a[@id = 'forbidden']";
+    public static final String notFoundLink = "//a[@id = 'invalid-url']";
+    public static final String responseLink = "//p[@id = 'linkResponse']";
 
 }
 
