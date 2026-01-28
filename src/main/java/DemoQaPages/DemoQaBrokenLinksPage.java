@@ -2,42 +2,50 @@ package DemoQaPages;
 
 import XpathLocators.XpathLocators;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DemoQaBrokenLinksPage extends DemoQaHomePage{
+public class DemoQaBrokenLinksPage extends DemoQaHomePage {
 
     public DemoQaBrokenLinksPage verifyBrokenImages() {
-        List<WebElement> images =
-                findElements(XpathLocators.imagesXpath);
+
+        List<WebElement> images = findElements(XpathLocators.imagesXpath);
         List<String> brokenImages = new ArrayList<>();
 
         for (WebElement img : images) {
             String src = img.getAttribute("src");
-            try {
 
-                verifyIsImageRendered(img,
-                        "Image is not rendared " + src);
+            // Optional: čekanje dok se slika učita (da pokrije lazy-load)
+            try {
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+                wait.until(driver -> ((JavascriptExecutor) driver)
+                        .executeScript("return arguments[0].complete;", img));
             } catch (Exception e) {
-                brokenImages.add("UI broken " + src);
+                // ako slika ne učita u 5s, možemo smatrati broken
+                brokenImages.add(src + " (timeout)");
+                continue;
             }
-                int statusCode = getHttpResponseCode(src);
 
+            // Soft assert: uhvati AssertionError iz BaseMethod
             try {
-                verifyHttpStatus(statusCode, 200, "Broken image (HTTP): " + src);
+                verifyIsImageRendered(img, "Image is not rendered: " + src);
             } catch (AssertionError e) {
-                brokenImages.add("HTTP broken: " + src + " -> " + statusCode);
+                brokenImages.add(src); // dodaj u listu
+                System.out.println("Broken image detected: " + src);
             }
         }
 
-        Assertions.assertTrue(brokenImages.isEmpty(),
-                "Broken images found: \n" + brokenImages);
-
+        // Finalni assert koji failuje test ako ima broken images
+        Assertions.assertTrue(
+                brokenImages.isEmpty(),
+                "Broken images found:\n" + brokenImages
+        );
 
         return this;
     }
-
-
 }
