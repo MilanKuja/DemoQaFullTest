@@ -130,6 +130,10 @@ public class XpathLocators  {
     public static final String notFoundLink = "//a[@id = 'invalid-url']";
     public static final String responseLink = "//p[@id = 'linkResponse']";
 
+    //Broken Links-Images
+    public static final String imagesXpath = "//img";
+
+
 }
 
 

@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -180,6 +182,21 @@ public class BaseMethods extends Driver {
                 , message);
     }
 
+    public void verifyHttpStatus(int actual, int expected, String message) {
+        Assertions.assertEquals(expected, actual, message);
+    }
+
+    public void verifyIsImageRendered(WebElement image, String message) {
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+
+        boolean isRendered = (Boolean) js.executeScript(
+                "return arguments[0].complete && arguments[0].naturalWidth > 0;",
+                image
+        );
+
+        Assertions.assertTrue(isRendered, message);
+    }
+
 
 
     //Other methods
@@ -287,6 +304,22 @@ public class BaseMethods extends Driver {
 
     public List<WebElement> findElements(String xpath) {
         return getDriver().findElements(By.xpath(xpath));
+    }
+
+    public int getHttpResponseCode(String url) {
+        try {
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+            connection.connect();
+
+            return connection.getResponseCode();
+
+        } catch (Exception e) {
+            return -1; //request nije uspeo
+        }
+
     }
 
 
