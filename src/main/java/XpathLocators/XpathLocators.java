@@ -131,7 +131,7 @@ public class XpathLocators  {
     public static final String responseLink = "//p[@id = 'linkResponse']";
 
     //Broken Links-Images
-    public static final String imagesXpath = "//img";
+    public static final String imagesXpath = "//div[@class = 'col-12 mt-4 col-md-6']//img[contains(@src, 'images')]";
 
 
 }

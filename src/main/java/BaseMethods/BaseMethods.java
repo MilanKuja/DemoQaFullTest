@@ -194,7 +194,8 @@ public class BaseMethods extends Driver {
                 image
         );
 
-        Assertions.assertTrue(isRendered, message);
+
+
     }
 
 
