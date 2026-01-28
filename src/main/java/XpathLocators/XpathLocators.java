@@ -11,6 +11,7 @@ public class XpathLocators  {
     public static final String webTablesDrop = "//li[@id = 'item-3']//span[text() = 'Web Tables']";
     public static final String buttonsDrop = "//li[@id = 'item-4']//span[text() = 'Buttons']";
     public static final String linksDrop = "//li[@id = 'item-5']//span[text() = 'Links']";
+    public static final String brokenLinksDrop = "//li[@id = 'item-6']//span[text() = 'Broken Links - Images']";
 
 
 

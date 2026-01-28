@@ -114,6 +114,11 @@ public class DemoQaLinksPage extends DemoQaHomePage {
         return this;
     }
 
+    public DemoQaBrokenLinksPage clickOnBrokenLinksDrop() {
+        click(XpathLocators.brokenLinksDrop);
+        return new DemoQaBrokenLinksPage();
+    }
+
 
 
 

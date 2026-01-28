@@ -77,10 +77,12 @@ public class DemoQaTest extends DemoQaHomePage{
                 .searchRecord("Gavrilo")
                 .clickOnFirstNameHeader()
                 .clickOnButtonsDrop()
+                //Buttons
                 .doubleClickButtonDoubleClick().verifyDoubleClickMessage("You have done a double click")
                 .rightClickRightClickButton().veirfyRightClickMessage("You have done a right click")
                 .clickOnClickMeButton().verifyClickMeButtonMessage("You have done a dynamic click")
                 .clickOnLinksDropDown()
+                //Links
                 .clickOnSimpleLink().returnToMainTab()
                 .clickOnDynamicLink().returnToMainTab()
                 .clickOnCreatedLink().verifyResponseForCreated()
@@ -89,7 +91,9 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnBadRequest().verifyResponseForBadRequest()
                 .clickOnUnauthorized().verifyResponseForUnauthorized()
                 .clickOnForbidden().verifyResponseForForbidden()
-                .clickOnNotFound().verifyResponseForNotFound();
+                .clickOnNotFound().verifyResponseForNotFound()
+                //Broken links
+                .clickOnBrokenLinksDrop();
 
 
 
