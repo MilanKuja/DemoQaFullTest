@@ -95,7 +95,7 @@ public class DemoQaTest extends DemoQaHomePage{
                 //Broken links
                 .clickOnBrokenLinksDrop().verifyBrokenImages()
                 .clickOnUploadAndDownLoadDrop()
-                .clickOnDownloadButton();
+                .clickOnDownloadButton().uploadFile().verifyUploadedFile("sampleFile.jpeg");
 
 
 

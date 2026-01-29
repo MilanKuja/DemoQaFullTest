@@ -24,43 +24,43 @@ public class DemoQaLinksPage extends DemoQaHomePage {
 
     public DemoQaLinksPage clickOnCreatedLink() throws InterruptedException {
         click(XpathLocators.createdLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnNoContent() throws InterruptedException {
         actionClick(XpathLocators.noContentLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnMoved() throws InterruptedException {
         click(XpathLocators.movedLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnBadRequest() throws InterruptedException {
         click(XpathLocators.badRequestLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnUnauthorized() throws InterruptedException {
         click(XpathLocators.unauthorizedLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnForbidden() throws InterruptedException {
         click(XpathLocators.forbiddenLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 
     public DemoQaLinksPage clickOnNotFound() throws InterruptedException {
         click(XpathLocators.notFoundLink);
-        Thread.sleep(500);
+        Thread.sleep(700);
         return this;
     }
 

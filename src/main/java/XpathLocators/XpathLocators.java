@@ -135,9 +135,10 @@ public class XpathLocators  {
     public static final String imagesXpath = "//img";
             // "//div[@class = 'col-12 mt-4 col-md-6']//img[contains(@src, 'images')]";
 
-    //Upload and Downalod
+    //Upload and Download
     public static final String downloadButton = "//a[@id = 'downloadButton']";
     public static final String uploadButton = "//input[@id = 'uploadFile']";
+    public static final String uplodedFileName = "//p[@id = 'uploadedFilePath']";
 
 }
 

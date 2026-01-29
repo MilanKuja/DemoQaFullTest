@@ -14,10 +14,7 @@ import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class BaseMethods extends Driver {
 
@@ -195,7 +192,21 @@ public class BaseMethods extends Driver {
                 image
         );
 
+    }
 
+    public void verifyUploadedFile(String expecttedFileName, String uploadedFile, String message) {
+        try {
+            WebElement fileElements = findElement(uploadedFile);
+            String uploadedFileText = fileElements.getText();
+            String uploadedFileName = uploadedFileText.substring(uploadedFileText.lastIndexOf("\\") + 1);
+
+            Assertions.assertEquals(
+                    expecttedFileName,
+                    uploadedFileName, message);
+
+        }catch (NoSuchElementException e) {
+            Assertions.fail("Uploaded element was not found");
+        }
 
     }
 
