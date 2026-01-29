@@ -12,6 +12,7 @@ public class XpathLocators  {
     public static final String buttonsDrop = "//li[@id = 'item-4']//span[text() = 'Buttons']";
     public static final String linksDrop = "//li[@id = 'item-5']//span[text() = 'Links']";
     public static final String brokenLinksDrop = "//li[@id = 'item-6']//span[text() = 'Broken Links - Images']";
+    public static final String UploadAndDownloadDrop = "//li[@id = 'item-7']//span[text() = 'Upload and Download']";
 
 
 
@@ -134,6 +135,9 @@ public class XpathLocators  {
     public static final String imagesXpath = "//img";
             // "//div[@class = 'col-12 mt-4 col-md-6']//img[contains(@src, 'images')]";
 
+    //Upload and Downalod
+    public static final String downloadButton = "//a[@id = 'downloadButton']";
+    public static final String uploadButton = "//input[@id = 'uploadFile']";
 
 }
 

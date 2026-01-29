@@ -7,7 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Driver  {
     private static final String CHROME_DRIVER = "webdriver.chrome.driver";
@@ -47,6 +49,14 @@ public class Driver  {
             options.addArguments("disable-infobars");
             options.addArguments("start-maximized");
             options.addArguments("--disable-notifications");
+
+            Map<String, Object> prefs = new HashMap<>();
+            prefs.put("download.default_directory",
+                    System.getProperty("user.dir") + "/downloads");
+            prefs.put("download.prompt_for_download", false);
+            prefs.put("safebrowsing.enabled", true);
+
+            options.setExperimentalOption("prefs", prefs);
 
             driver = new ChromeDriver(options);
             setDriver(driver);

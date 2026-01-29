@@ -48,4 +48,11 @@ public class DemoQaBrokenLinksPage extends DemoQaHomePage {
 
         return this;
     }
+
+    public DemoQaUploadAndDownload clickOnUploadAndDownLoadDrop() {
+        click(XpathLocators.UploadAndDownloadDrop);
+        return new DemoQaUploadAndDownload();
+    }
+
+
 }

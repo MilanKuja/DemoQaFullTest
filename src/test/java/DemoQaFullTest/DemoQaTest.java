@@ -93,7 +93,9 @@ public class DemoQaTest extends DemoQaHomePage{
                 .clickOnForbidden().verifyResponseForForbidden()
                 .clickOnNotFound().verifyResponseForNotFound()
                 //Broken links
-                .clickOnBrokenLinksDrop().verifyBrokenImages();
+                .clickOnBrokenLinksDrop().verifyBrokenImages()
+                .clickOnUploadAndDownLoadDrop()
+                .clickOnDownloadButton();
 
 
 
