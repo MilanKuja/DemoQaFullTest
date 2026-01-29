@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
@@ -320,6 +321,32 @@ public class BaseMethods extends Driver {
         } catch (Exception e) {
             return -1; //request nije uspeo
         }
+
+    }
+
+    public boolean renameDownloadedTmpCrDownloadFile(String fileName, int timeoutSeconds) {
+        String downloadPath = System.getProperty("user.dir") + "/downloads";
+        File dir = new File(downloadPath);
+
+        int attempts = 0;
+        while (attempts < timeoutSeconds) {
+            File[] tmpFiles = dir.listFiles((d, name) -> name.endsWith(".tmp") || name.endsWith(".crdownload"));
+            if (tmpFiles != null && tmpFiles.length > 0) {
+                File tmpFile = tmpFiles[0];
+                File renamedFile = new File(downloadPath + "/" + fileName);
+                boolean success = tmpFile.renameTo(renamedFile);
+                if (success) {
+                    return true;
+                }
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {}
+            attempts++;
+
+        }
+        return false;
 
     }
 
