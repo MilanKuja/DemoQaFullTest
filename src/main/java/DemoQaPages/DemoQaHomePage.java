@@ -21,4 +21,24 @@ public class DemoQaHomePage extends BaseMethods {
         click(XpathLocators.webTablesDrop);
         return new DemoQaWebTablesPage();
     }
+
+    public DemoQaButtonsPage clickOnButtonsDrop(){
+        click(XpathLocators.buttonsDrop);
+        return new DemoQaButtonsPage();
+    }
+
+    public DemoQaLinksPage clickOnLinksDrop(){
+        click(XpathLocators.linksDrop);
+        return new DemoQaLinksPage();
+    }
+
+    public DemoQaBrokenLinksPage clickOnBrokenLinksDrop(){
+        click(XpathLocators.brokenLinksDrop);
+        return new DemoQaBrokenLinksPage();
+    }
+
+    public DemoQaUploadAndDownload clickOnUploadAndDownloadDrop(){
+        click(XpathLocators.UploadAndDownloadDrop);
+        return new DemoQaUploadAndDownload();
+    }
 }
