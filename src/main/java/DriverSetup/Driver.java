@@ -4,46 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class Driver  {
-    private static final String CHROME_DRIVER = "webdriver.chrome.driver";
+public class Driver {
 
     private static WebDriver driver;
-
-    protected static void setDriver(WebDriver driver) {
-        Driver.driver = driver;
-    }
 
     public static WebDriver getDriver() {
         return driver;
     }
 
-    public static List<String> createDriver() {
-        if (getDriver() == null) {
-            try {
-                InputStream inputStream = Driver.class.getClassLoader().getResourceAsStream("chromedriver.exe");
+    public static WebDriver createDriver(){
 
-                if (inputStream == null) {
-                    throw new RuntimeException("chromedriver.exe nije pronadjen u rescorces");
-                }
-
-                File tempFile = File.createTempFile("chromedriver", ".exe");
-                tempFile.deleteOnExit();
-
-                try (FileOutputStream out = new FileOutputStream(tempFile)) {
-                    inputStream.transferTo(out);
-                }
-
-                System.setProperty(CHROME_DRIVER, tempFile.getAbsolutePath());
-            } catch (Exception e) {
-                throw new RuntimeException("Greska prilikom preuzimanja chromedriver.exe iz resources", e);
-            }
+            if (getDriver() == null) {
 
             ChromeOptions options = new ChromeOptions();
             options.addArguments("disable-infobars");
@@ -59,15 +33,15 @@ public class Driver  {
             options.setExperimentalOption("prefs", prefs);
 
             driver = new ChromeDriver(options);
-            setDriver(driver);
         }
-        return null;
+        return driver;
     }
 
     public static void quitDriver() {
-        if (getDriver() != null) {
-            getDriver().quit();
-            setDriver(null);
+        if (driver != null) {
+            driver.quit();
+            driver = null
+            ;
 
         }
     }
