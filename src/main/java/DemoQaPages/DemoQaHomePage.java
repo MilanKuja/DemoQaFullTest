@@ -12,4 +12,13 @@ public class DemoQaHomePage extends BaseMethods {
         return new DemoQaTextBoxPage();
 
     }
+    public DemoQaRadioButtonPage clickOnRadioButtonDrop(){
+        click(XpathLocators.radioButtonDrop);
+        return new DemoQaRadioButtonPage();
+    }
+
+    public DemoQaWebTablesPage clickOnWebTablesDrop(){
+        click(XpathLocators.webTablesDrop);
+        return new DemoQaWebTablesPage();
+    }
 }

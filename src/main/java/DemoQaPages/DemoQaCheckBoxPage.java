@@ -96,7 +96,7 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
     }
 
     public DemoQaCheckBoxPage clickOnGeneralOfficeCheckBox(){
-        click(XpathLocators.generalOffice);
+        click(XpathLocators.generalOfficeCheckBox);
         return this;
     }
 
@@ -127,125 +127,125 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
     }
 
     public DemoQaCheckBoxPage verifyAllCheckBoxesAreCheck() {
-        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-check", "Desktop checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-check","Documents checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-check","Downloads checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.homeCheckBox,"class","rct-icon-check","Home checkbox is checked");
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rc-tree-checkbox rc-tree-checkbox-checked", "Desktop checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rc-tree-checkbox rc-tree-checkbox-checked","Documents checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rc-tree-checkbox rc-tree-checkbox-checked","Downloads checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.homeCheckBox,"class","rc-tree-checkbox rc-tree-checkbox-checked","Home checkbox is checked");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyAllDesktopCheckBoxesAreChecked(){
-        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Notes checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
-        verifyCheckBoxChecked(XpathLocators.desktopCheckBox,"class","rct-icon-check","Desktop checkbox is checked");
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rc-tree-checkbox rc-tree-checkbox-checked","Notes checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rc-tree-checkbox rc-tree-checkbox-checked","Commands checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox,"class","rc-tree-checkbox rc-tree-checkbox-checked","Desktop checkbox is checked");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyAllCheckBoxesAreUnCheck() {
-        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-uncheck", "Desktop checkbox is checked.");
-        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-uncheck","Documents checkbox is checked.");
-        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-uncheck","Downloads checkbox is checked.");
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "aria-checked", "false", "Desktop checkbox is checked.");
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "aria-checked", "false","Documents checkbox is checked.");
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "aria-checked", "false","Downloads checkbox is checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyHomeIsPartialCheck(){
-        verifyCheckBoxChecked(XpathLocators.homeCheckBox, "class", "rct-icon-half-check","Home checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.homeCheckBox, "aria-checked", "mixed","Home checkbox is not partial checked.");
         return this;
     }
     //Desktop
     public DemoQaCheckBoxPage verifyDesktopIsPartialCheck(){
-        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "class", "rct-icon-half-check","Desktop checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.desktopCheckBox, "aria-checked", "mixed","Desktop checkbox is not partial checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyDesktopCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Desktop checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "aria-checked", "true","Desktop checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyNotesCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "class", "rct-icon-check","Notes checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.notesCheckBox, "aria-checked", "true","Notes checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyCommandsCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "class", "rct-icon-check","Commands checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.commandsCheckBox, "aria-checked", "true","Commands checkbox is not checked.");
         return this;
     }
     //Documents
     public DemoQaCheckBoxPage verifyDocumentsIsPartialCheck(){
-        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-half-check","Documents checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "aria-checked", "mixed","Documents checkbox is not partial checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyDocumentsCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "class", "rct-icon-check","Documents checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.documentsCheckBox, "aria-checked", "true","Documents checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyWorkSpaceCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "class", "rct-icon-check","WorkSpace checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "aria-checked", "true","WorkSpace checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyWorkSpaceCheckBoxIsPartialChecked(){
-        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "class", "rct-icon-half-check","WorkSpace checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.workSpaceCheckBox, "aria-checked", "mixed","WorkSpace checkbox is not partial checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyReactCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.reactWorkSpaceCheckBox, "class", "rct-icon-check","React checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.reactWorkSpaceCheckBox, "aria-checked", "true","React checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyAngularCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.angularWorkSpaceCheckBox, "class", "rct-icon-check","Angular checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.angularWorkSpaceCheckBox, "aria-checked", "true","Angular checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyVeuCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.veuWorkSpaceCheckBox, "class", "rct-icon-check","Veu checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.veuWorkSpaceCheckBox, "aria-checked", "true","Veu checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyOfficeCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "class", "rct-icon-check","Office checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "aria-checked", "true","Office checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyOfficeCheckBoxIsPartialChecked(){
-        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "class", "rct-icon-half-check","Office checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.officeCheckBox, "aria-checked", "mixed","Office checkbox is not partial checked.");
         return this;
     }
 
 
     public DemoQaCheckBoxPage verifyPublicCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.publicOfficeCheckBox, "class", "rct-icon-check","Public checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.publicOfficeCheckBox, "aria-checked", "true","Public checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyPrivateCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.privateOfficeCheckBox, "class", "rct-icon-check","Private checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.privateOfficeCheckBox, "aria-checked", "true","Private checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyClassifiedCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.classifiedOfficeCheckBox, "class", "rct-icon-check","Classified checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.classifiedOfficeCheckBox, "aria-checked", "true","Classified checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyGeneralCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.generalOffice, "class", "rct-icon-check","General checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.generalOfficeCheckBox, "aria-checked", "true","General checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyDownloadsCheckBoxIsChecked(){
-        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-check","Downloads checkbox is not checked.");
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "aria-checked", "true","Downloads checkbox is not checked.");
         return this;
     }
 
     public DemoQaCheckBoxPage verifyDownloadsCheckBoxIsPartialChecked(){
-        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "class", "rct-icon-half-check","Downloads checkbox is not partial checked.");
+        verifyCheckBoxChecked(XpathLocators.downloadsCheckBox, "aria-checked", "mixed","Downloads checkbox is not partial checked.");
         return this;
     }
 
@@ -289,10 +289,7 @@ public class DemoQaCheckBoxPage extends DemoQaTextBoxPage {
         return this;
     }
 
-    public DemoQaRadioButtonPage clickOnRadioButtonDrop(){
-        click(XpathLocators.radioButtonDrop);
-        return new DemoQaRadioButtonPage();
-    }
+
 
 
 

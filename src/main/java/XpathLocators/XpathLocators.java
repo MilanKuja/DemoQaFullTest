@@ -34,34 +34,34 @@ public class XpathLocators  {
 
 
     //CheckBox:
-    public static final String homeExpandButton = "//label[@for='tree-node-home']/preceding-sibling::button";
-    public static final String homeCheckBox = "//label[@for='tree-node-home']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String homeExpandButton = "//span[@title = 'Home']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String homeCheckBox = "//span[@title = 'Home']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Desktop:
-    public static final String desktopExpandButton = "//label[@for='tree-node-desktop']/preceding-sibling::button";
-    public static final String desktopCheckBox = "//label[@for='tree-node-desktop']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String notesCheckBox = "//label[@for='tree-node-notes']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String commandsCheckBox = "//label[@for='tree-node-commands']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String desktopExpandButton = "//span[@title = 'Desktop']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String desktopCheckBox = "//span[@title = 'Desktop']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String notesCheckBox = "//span[@title = 'Notes']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String commandsCheckBox = "//span[@title = 'Commands']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Documents
-    public static final String documentsExpandButton = "//label[@for='tree-node-documents']/preceding-sibling::button";
-    public static final String documentsCheckBox = "//label[@for='tree-node-documents']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String workSpaceCheckBox = "//label[@for='tree-node-workspace']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String officeCheckBox = "//label[@for='tree-node-office']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String documentsExpandButton = "//span[@title = 'Documents']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String documentsCheckBox = "//span[@title = 'Documents']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String workSpaceCheckBox = "//span[@title = 'WorkSpace']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String officeCheckBox = "//span[@title = 'Office']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Documents WorkSpace
-    public static final String workSpaceExpandButton = "//label[@for='tree-node-workspace']/preceding-sibling::button";
-    public static final String reactWorkSpaceCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String angularWorkSpaceCheckBox =  "//label[@for='tree-node-angular']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String veuWorkSpaceCheckBox =  "//label[@for='tree-node-vue']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String workSpaceExpandButton = "//span[@title = 'WorkSpace']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String reactWorkSpaceCheckBox = "//span[@title = 'React']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String angularWorkSpaceCheckBox =  "//span[@title = 'Angular']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String veuWorkSpaceCheckBox =  "//span[@title = 'Veu']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Documents Office
-    public static final String officeExpandButton = "//label[@for='tree-node-office']/preceding-sibling::button";
-    public static final String publicOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String privateOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String classifiedOfficeCheckBox = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String generalOffice = "//label[@for='tree-node-react']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String officeExpandButton = "//span[@title = 'Office']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String publicOfficeCheckBox = "//span[@title = 'Public']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String privateOfficeCheckBox = "//span[@title = 'Private']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String classifiedOfficeCheckBox = "//span[@title = 'Classified']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String generalOfficeCheckBox = "//span[@title = 'General']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Downloads
-    public static final String downloadsExpandButton = "//label[@for='tree-node-downloads']/preceding-sibling::button";
-    public static final String downloadsCheckBox = "//label[@for='tree-node-downloads']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String wordFileCheckBox = "//label[@for='tree-node-wordFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
-    public static final String excelFileCheckBox = "//label[@for='tree-node-excelFile']//span[contains(@class,'rct-checkbox')]//*[local-name()='svg']";
+    public static final String downloadsExpandButton = "//span[@title = 'Downloads']/preceding-sibling::span[contains(@class, 'rc-tree-switcher rc-tree-switcher')]";
+    public static final String downloadsCheckBox = "//span[@title = 'Downloads']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String wordFileCheckBox = "//span[@title = 'Word File.doc']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
+    public static final String excelFileCheckBox = "//span[@title = 'Excel File.doc']/preceding-sibling::span[contains(@class, 'rc-tree-checkbox')]";
     //Resoult
     public static final String resultText = "//div[@id = 'result']";
     //Plus and Minus expands
@@ -86,7 +86,7 @@ public class XpathLocators  {
     }
     public static final String rows = "//div[@class='rt-tr-group']//div[@class='rt-td']";
     //Column header
-    public static final String firstNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='First Name']";
+    public static final String firstNameColumnHeader = "//tr//th[text() ='First Name']";
     public static final String lastNameColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Last Name']";
     public static final String ageColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Age']";
     public static final String emailColumnHeader = "//div[contains(@role, 'columnheader')]//div[text() ='Email']";
