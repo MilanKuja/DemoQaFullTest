@@ -1,8 +1,10 @@
 package Cortech.CortechPagesRM;
 
-import DriverSetup.Driver;
+public class LogInLabels {
 
-public class LogInLabels  extends Driver {
+    public static final String LOGIN = "Login";
+    public static final String EMAIL = "email";
+    public static final String PASSWORD = "password";
 
 
 }

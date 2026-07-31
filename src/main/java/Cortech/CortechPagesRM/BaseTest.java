@@ -25,9 +25,9 @@ public class BaseTest extends Driver {
         element.click();
     }
 
-    public void sendKeys(String xpath) {
-        WebElement element = findElement(xpath);
-        element.sendKeys();
+    public void sendKeys(String xpath, String text) {
+        findElement(xpath).sendKeys(text); ;
+
     }
 
 }
