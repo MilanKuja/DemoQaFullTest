@@ -1,4 +1,4 @@
-package Cortech.CortechPagesRM;
+package Cortech.CortechPagesRM.Labels;
 
 public class LogInLabels {
 
