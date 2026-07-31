@@ -1,5 +1,6 @@
 package DriverSetup;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,13 +10,10 @@ import java.util.Map;
 
 public class Driver {
 
+    @Getter
     private static WebDriver driver;
 
-    public static WebDriver getDriver() {
-        return driver;
-    }
-
-    public static WebDriver createDriver(){
+    public static void createDriver(){
 
             if (getDriver() == null) {
 
@@ -34,7 +32,6 @@ public class Driver {
 
             driver = new ChromeDriver(options);
         }
-        return driver;
     }
 
     public static void quitDriver() {
@@ -45,4 +42,8 @@ public class Driver {
 
         }
     }
+
+
+
+
 }
